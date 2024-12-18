@@ -1,8 +1,8 @@
 # The Primer theme
 
-[![.github/workflows/ci.yaml](https://github.com/pages-themes/primer/actions/workflows/ci.yaml/badge.svg)](https://github.com/pages-themes/primer/actions/workflows/ci.yaml) [![Gem Version](https://badge.fury.io/rb/jekyll-theme-primer.svg)](https://badge.fury.io/rb/jekyll-theme-primer)
+[![.github/workflows/ci.yaml](https://github.com/bagustris/primer/actions/workflows/ci.yaml/badge.svg)](https://github.com/bagustris/primer/actions/workflows/ci.yaml) [![Gem Version](https://badge.fury.io/rb/jekyll-theme-primer.svg)](https://badge.fury.io/rb/jekyll-theme-primer)
 
-*Primer is a Jekyll theme for GitHub Pages. You can [preview the theme to see what it looks like](http://pages-themes.github.io/primer), or even [use it today](#usage).*
+*Primer is a Jekyll theme for GitHub Pages. You can [preview the theme to see what it looks like](http://bagustris.github.io/primer), or even [use it today](#usage).*
 
 ![Thumbnail of Primer](thumbnail.png)
 
@@ -28,7 +28,7 @@ To use the Primer theme:
 
 ### Configuration variables
 
-Primer will respect the following variables, if set in your site's `_config.yml`:
+Primer will respect the following variables if set in your site's `_config.yml`:
 
 ```yml
 title: [The title of your site]
@@ -62,21 +62,21 @@ If you'd like to add your own custom styles:
 
 If you'd like to change the theme's HTML layout:
 
-1. For some changes such as a custom `favicon`, you can add custom files in your local `_includes` folder. The files [provided with the theme](https://github.com/pages-themes/primer/tree/master/_includes) provide a starting point and are included by the [original layout template](https://github.com/pages-themes/primer/blob/master/_layouts/default.html).
-2. For more extensive changes, [copy the original template](https://github.com/pages-themes/primer/blob/master/_layouts/default.html) from the theme's repository<br />(*Pro-tip: click "raw" to make copying easier*)
+1. For some changes such as a custom `favicon`, you can add custom files in your local `_includes` folder. The files [provided with the theme](https://github.com/bagustris/primer/tree/master/_includes) provide a starting point and are included by the [original layout template](https://github.com/bagustris/primer/blob/master/_layouts/default.html).
+2. For more extensive changes, [copy the original template](https://github.com/bagustris/primer/blob/master/_layouts/default.html) from the theme's repository<br />(*Pro-tip: click "raw" to make copying easier*)
 3. Create a file called `/_layouts/default.html` in your site
 4. Paste the default layout content copied in the first step
 5. Customize the layout as you'd like
 
 ### Customizing Google Analytics code
 
-Google has released several iterations to their Google Analytics code over the years since this theme was first created. If you would like to take advantage of the latest code, paste it into `_includes/head-custom-google-analytics.html` in your Jekyll site.
+Google has released several iterations to its Google Analytics code over the years since this theme was first created. If you would like to take advantage of the latest code, paste it into `_includes/head-custom-google-analytics.html` in your Jekyll site.
 
 ### Overriding GitHub-generated URLs
 
 Templates often rely on URLs supplied by GitHub such as links to your repository or links to download your project. If you'd like to override one or more default URLs:
 
-1. Look at [the template source](https://github.com/pages-themes/primer/blob/master/_layouts/default.html) to determine the name of the variable. It will be in the form of `{{ site.github.zip_url }}`.
+1. Look at [the template source](https://github.com/bagustris/primer/blob/master/_layouts/default.html) to determine the name of the variable. It will be in the form of `{{ site.github.zip_url }}`.
 2. Specify the URL that you'd like the template to use in your site's `_config.yml`. For example, if the variable was `site.github.url`, you'd add the following:
     ```yml
     github:
@@ -85,13 +85,13 @@ Templates often rely on URLs supplied by GitHub such as links to your repository
     ```
 3. When your site is built, Jekyll will use the URL you specified, rather than the default one provided by GitHub.
 
-*Note: You must remove the `site.` prefix, and each variable name (after the `github.`) should be indent with two space below `github:`.*
+*Note: You must remove the `site.` prefix, and each variable name (after the `github.`) should be indented with two spaces below `github:`.*
 
 For more information, see [the Jekyll variables documentation](https://jekyllrb.com/docs/variables/).
 
 ## Roadmap
 
-See the [open issues](https://github.com/pages-themes/primer/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/bagustris/primer/issues) for a list of proposed features (and known issues).
 
 ## Project philosophy
 
@@ -105,7 +105,7 @@ Interested in contributing to Primer? We'd love your help. Primer is an open sou
 
 If you'd like to preview the theme locally (for example, in the process of proposing a change):
 
-1. Clone down the theme's repository (`git clone https://github.com/pages-themes/primer`)
+1. Clone down the theme's repository (`git clone https://github.com/bagustris/primer`)
 2. `cd` into the theme's directory
 3. Run `script/bootstrap` to install the necessary dependencies
 4. Run `bundle exec jekyll serve` to start the preview server
