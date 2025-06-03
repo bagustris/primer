@@ -25,5 +25,42 @@
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
     <script>anchors.add();</script>
+     <!-- Pagefind JS snippet -->
+    <script src="/pagefind/pagefind.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        const input = document.getElementById("search-input");
+        const results = document.getElementById("search-results");
+        if (input) {
+          input.addEventListener("input", function(e) {
+            const query = e.target.value;
+            if (!query) {
+              results.innerHTML = "";
+              return;
+            }
+            window.pagefind.search(query).then(function(res) {
+              results.innerHTML = "";
+              res.results.forEach(function(r) {
+                r.data().then(function(data) {
+                  const item = document.createElement("div");
+                  item.className = "search-result";
+                  item.innerHTML = `<a href="${data.url}"><strong>${data.meta.title || data.url}</strong></a><br><small>${data.excerpt || ""}</small>`;
+                  results.appendChild(item);
+                });
+              });
+              if (res.results.length === 0) {
+                results.innerHTML = "<em>No results found.</em>";
+              }
+            });
+          });
+        }
+      });
+    </script>
+    <style>
+      #search-results .search-result {
+        margin-bottom: 0.75em;
+      }
+    </style>
+    <!-- End Pagefind JS snippet -->
   </body>
 </html>
