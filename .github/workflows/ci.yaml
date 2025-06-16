@@ -7,17 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     name: script/cibuild
     steps:
-      - name: Cache apt packages
-        uses: awalsh128/cache-apt-pkgs-action@v1.4.3
-        with:
-          packages: >-
-            build-essential
-            libffi-dev
-            libyaml-dev
-            zlib1g-dev
-            ruby-dev
-            nodejs
-      - uses: actions/checkout@v2
+      - uses: actions/upload-artifact@v4
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: 3.2
