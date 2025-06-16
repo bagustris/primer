@@ -1,15 +1,16 @@
+@use "sass:color";
 @import "color-system.scss";
 // Color variables
 // stylelint-disable declaration-bang-space-before
 
 // State indicators.
-$status-pending:    desaturate($yellow-700, 15%) !default;
+$status-pending:    color.adjust($yellow-700, $saturation: -15%) !default;
 
 // Repository type colors
 // Should be able to deprecate these in future
 $repo-private-text: $black-fade-70 !default;
 $repo-private-bg:   $yellow-000 !default;
-$repo-private-icon: transparentize($yellow-900, 0.5) !default;
+$repo-private-icon: color.adjust($yellow-900, $alpha: -0.5) !default;
 
 // Highlight used for things like search
 $highlight-yellow: rgba(255, 247, 140, 0.5);
@@ -21,16 +22,16 @@ $border-blue:        $blue-500 !default;
 $border-blue-light:  $blue-200 !default;
 
 $border-green:       $green-400 !default;
-$border-green-light: desaturate($green-300, 40%) !default;
+$border-green-light: color.adjust($green-300, $saturation: -40%) !default;
 
 $border-purple:      $purple !default;
 
 $border-red:         $red !default;
-$border-red-light:   desaturate($red-300, 60%) !default;
+$border-red-light:   color.adjust($red-300, $saturation: -60%) !default;
 
 $border-purple:      $purple !default;
 
-$border-yellow:      desaturate($yellow-300, 60%) !default;
+$border-yellow:      color.adjust($yellow-300, $saturation: -60%) !default;
 
 $border-gray-dark:   $gray-300 !default;
 $border-gray-darker: $gray-700 !default;
