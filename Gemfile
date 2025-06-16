@@ -3,3 +3,6 @@
 source "https://rubygems.org"
 
 gemspec
+
+# Additional dependencies for CI/CD
+gem 'faraday-retry'
