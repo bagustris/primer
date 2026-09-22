@@ -16,3 +16,5 @@ jobs:
         run: script/bootstrap
       - name: test
         run: script/cibuild
+      - name: RuboCop
+        run: bundle exec rubocop -D --config .rubocop.yml

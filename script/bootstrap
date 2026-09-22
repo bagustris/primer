@@ -3,4 +3,6 @@
 set -e
 
 gem install bundler
+# Ensure faraday-retry is available
+gem install faraday-retry
 bundle install
